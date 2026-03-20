@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Idul Fitri 1447 H</title>
+    <!-- Tailwind CSS untuk styling cepat -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons untuk ikon estetik -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Pengaturan Font */
+        .font-serif { font-family: 'Lora', serif; }
+        .font-sans { font-family: 'Montserrat', sans-serif; }
+
+        body {
+            background-color: #F4F1EA;
+            color: #2C3E2A;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* --- Animasi Kustom --- */
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+        @keyframes float-reverse {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(15px) rotate(-2deg); }
+        }
+        @keyframes fade-in-up {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scale-in {
+            from { opacity: 0; transform: scale(0.85); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); }
+            50% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.6); }
+        }
+
+        /* Class untuk memanggil animasi */
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
+        
+        .animate-fade-in-up { 
+            opacity: 0; 
+            animation: fade-in-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+        }
+        .animate-scale-in { 
+            opacity: 0;
+            animation: scale-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+        }
+        
+        /* Delay untuk animasi berurutan */
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+        .delay-500 { animation-delay: 500ms; }
+        .delay-700 { animation-delay: 700ms; }
+
+        /* Efek Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 40px rgba(44, 62, 42, 0.05);
+        }
+
+        /* Tekstur grain di latar belakang */
+        .bg-texture {
+            position: fixed;
+            inset: 0;
+            opacity: 0.25;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            z-index: 0;
+        }
+
+        .hidden-element {
+            display: none;
+        }
+
+        /* Bingkai Foto Bulat */
+        .photo-frame {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid #D4AF37;
+            padding: 5px;
+            margin: 0 auto;
+            position: relative;
+            background: white;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .photo-frame img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6">
+    <!-- Tekstur Latar Belakang -->
+    <div class="bg-texture"></div>
+
+    <!-- Ornamen Melayang -->
+    <div class="absolute top-10 left-10 text-[#D4AF37]/30 animate-float z-0">
+        <i data-lucide="star" fill="currentColor"></i>
+    </div>
+    <div class="absolute bottom-20 right-10 text-[#D4AF37]/20 animate-float-reverse z-0">
+        <i data-lucide="moon" fill="currentColor" size="48"></i>
+    </div>
+    <div class="absolute top-1/4 right-1/4 text-[#8C9A86]/20 animate-float delay-300 z-0">
+        <i data-lucide="sparkles" size="32"></i>
+    </div>
+
+    <!-- LAYAR COVER (Pembuka) -->
+    <div id="cover-screen" class="relative z-10 w-full max-w-md text-center space-y-8 animate-scale-in">
+        <div class="relative inline-block">
+            <!-- Efek cahaya di belakang ikon -->
+            <div class="absolute -inset-4 bg-[#D4AF37]/20 rounded-full blur-xl animate-[pulse-glow_3s_ease-in-out_infinite]"></div>
+            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg relative z-10 border border-[#D4AF37]/30 text-[#D4AF37]">
+                <i data-lucide="moon" size="40" fill="currentColor"></i>
+            </div>
+        </div>
+        
+        <div class="space-y-2">
+            <p class="font-sans text-sm tracking-[0.2em] text-[#8C9A86] uppercase">Ada pesan spesial untuk anda</p>
+            <h1 class="font-serif text-3xl font-medium text-[#2C3E2A]">Idul Fitri 1447 H</h1>
+        </div>
+
+        <button onclick="openMessage()" class="group relative inline-flex items-center justify-center px-10 py-4 font-sans text-sm tracking-widest text-white uppercase transition-all duration-300 bg-[#2C3E2A] rounded-full hover:bg-[#3A5038] hover:shadow-2xl hover:-translate-y-1 active:scale-95">
+            <span class="flex items-center gap-2">
+                Buka Pesan <i data-lucide="send" size="16" class="group-hover:translate-x-1 transition-transform"></i>
+            </span>
+        </button>
+    </div>
+
+    <!-- LAYAR KONTEN UCAPAN (Muncul setelah klik tombol) -->
+    <div id="message-screen" class="hidden-element relative z-10 w-full max-w-md">
+        <div class="glass-card rounded-3xl p-8 sm:p-10 text-center relative overflow-hidden">
+            <!-- Garis dekorasi dalam -->
+            <div class="absolute inset-2 border border-[#D4AF37]/15 rounded-2xl pointer-events-none"></div>
+            
+            <div class="space-y-6 relative z-10">
+                <!-- Ikon Bintang Atas -->
+                <div class="flex justify-center animate-fade-in-up">
+                    <i data-lucide="star" class="text-[#D4AF37]" fill="currentColor" size="24"></i>
+                </div>
+
+                <!-- FOTO / GAMBAR ESTETIK -->
+                <div class="photo-frame animate-fade-in-up delay-100">
+                    <!-- Ganti URL 'src' di bawah ini dengan foto kamu sendiri -->
+                    <img src="foto.jpg.jpg" alt="">
+                </div>
+
+                <!-- Judul Utama -->
+                <div class="space-y-3 animate-fade-in-up delay-200">
+                    <h2 class="font-serif text-3xl sm:text-4xl font-medium text-[#2C3E2A] leading-tight">
+                        Selamat Hari Raya <br/>
+                        <span class="text-[#D4AF37]">Idul Fitri</span>
+                    </h2>
+                    <p class="font-sans text-sm tracking-[0.15em] text-[#8C9A86] uppercase">1 Syawal 1447 H</p>
+                </div>
+
+                <!-- Garis Pembatas -->
+                <div class="flex items-center justify-center gap-2 animate-fade-in-up delay-300">
+                    <div class="h-px w-12 bg-[#D4AF37]/40"></div>
+                    <i data-lucide="sparkles" size="14" class="text-[#D4AF37]"></i>
+                    <div class="h-px w-12 bg-[#D4AF37]/40"></div>
+                </div>
+
+                <!-- Teks Ucapan -->
+                <div class="animate-fade-in-up delay-500 space-y-4">
+                    <h3 class="font-serif text-xl font-medium text-[#2C3E2A]">Taqabbalallahu Minna Wa Minkum</h3>
+                    <p class="font-sans text-[15px] leading-relaxed text-[#4A5D48]">
+                        Harta paling berharga adalah sabar. Teman paling setia adalah amal. Ibadah paling indah adalah ikhlas. Identitas paling tinggi adalah iman. Pekerjaan paling berat adalah memaafkan. Selamat Idul Fitri, mohon maaf lahir dan batin.
+                    </p>
+                    <p class="font-sans text-[15px] font-medium text-[#2C3E2A] mt-2">
+                        Minal Aidin Wal Faizin,<br>Mohon Maaf Lahir dan Batin.
+                    </p>
+                </div>
+
+                <!-- Nama Pengirim -->
+                <div class="pt-6 animate-fade-in-up delay-700">
+                    <p class="font-sans text-xs text-[#8C9A86] uppercase tracking-widest mb-1">Salam Hangat Dari</p>
+                    <p class="font-serif text-xl font-medium text-[#2C3E2A]">Keluarga Besar Kami</p>
+                </div>
+            </div>
+
+            <!-- Efek Partikel Bintang Kecil (Overlay) -->
+            <div id="sparkles-overlay" class="absolute inset-0 pointer-events-none overflow-hidden rounded-3xl opacity-0 transition-opacity duration-1000">
+                <div class="absolute top-10 left-10 text-[#D4AF37]/30"><i data-lucide="star" size="10" fill="currentColor"></i></div>
+                <div class="absolute top-32 right-8 text-[#D4AF37]/30"><i data-lucide="star" size="14" fill="currentColor"></i></div>
+                <div class="absolute bottom-20 left-14 text-[#D4AF37]/30"><i data-lucide="star" size="12" fill="currentColor"></i></div>
+                <div class="absolute bottom-10 right-20 text-[#D4AF37]/30"><i data-lucide="sparkles" size="12"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Logika -->
+    <script>
+        // Jalankan Ikon Lucide setelah halaman dimuat
+        lucide.createIcons();
+
+        function openMessage() {
+            const cover = document.getElementById('cover-screen');
+            const message = document.getElementById('message-screen');
+            const sparkles = document.getElementById('sparkles-overlay');
+
+            // 1. Animasi keluar untuk layar cover
+            cover.style.transition = "all 0.6s cubic-bezier(0.16, 1, 0.3, 1)";
+            cover.style.opacity = "0";
+            cover.style.transform = "scale(0.9) translateY(-20px)";
+
+            // 2. Munculkan layar ucapan setelah animasi cover selesai
+            setTimeout(() => {
+                cover.classList.add('hidden-element');
+                message.classList.remove('hidden-element');
+                message.classList.add('animate-scale-in');
+                
+                // 3. Munculkan partikel bintang tambahan secara perlahan
+                setTimeout(() => {
+                    sparkles.classList.remove('opacity-0');
+                    sparkles.classList.add('opacity-100');
+                }, 400);
+            }, 500);
+        }
+    </script>
+</body>
+</html>
